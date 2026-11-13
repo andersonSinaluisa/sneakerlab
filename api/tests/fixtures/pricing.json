@@ -1,0 +1,2492 @@
+{
+  "defaultRules": [
+    {
+      "kind": "base_model",
+      "target": "court-low-01",
+      "label": "Court Low — par base",
+      "amount": 89,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "base_model",
+      "target": "court-classic-01",
+      "label": "Court Classic — par base",
+      "amount": 89,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "base_model",
+      "target": "sneaker-low-01",
+      "label": "Classic Low (provisional) — par base",
+      "amount": 79,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "per_zone",
+      "target": null,
+      "label": "Zona personalizada",
+      "amount": 6,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "per_image",
+      "target": null,
+      "label": "Ilustración impresa",
+      "amount": 9,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "per_text",
+      "target": null,
+      "label": "Texto personalizado",
+      "amount": 4,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "per_pattern",
+      "target": null,
+      "label": "Patrón",
+      "amount": 5,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "material_factor",
+      "target": "suede",
+      "label": "Gamuza",
+      "amount": 0,
+      "factor": 1.15,
+      "active": true
+    },
+    {
+      "kind": "material_factor",
+      "target": "mesh",
+      "label": "Malla técnica",
+      "amount": 0,
+      "factor": 1.1,
+      "active": true
+    },
+    {
+      "kind": "complexity",
+      "target": null,
+      "label": "Diseño complejo",
+      "amount": 0,
+      "factor": 1.25,
+      "active": true
+    },
+    {
+      "kind": "finish",
+      "target": "matte-protect",
+      "label": "Acabado protector mate",
+      "amount": 12,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "finish",
+      "target": "gloss",
+      "label": "Acabado brillante",
+      "amount": 12,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "service",
+      "target": "gift-box",
+      "label": "Caja de regalo",
+      "amount": 8,
+      "factor": 1,
+      "active": true
+    },
+    {
+      "kind": "service",
+      "target": "express",
+      "label": "Producción exprés (7 días)",
+      "amount": 25,
+      "factor": 1,
+      "active": true
+    }
+  ],
+  "cases": [
+    {
+      "name": "sin cambios",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_5106cf33-6b0b-4ed6-a5a1-e023ce5e6801",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.640Z",
+        "updatedAt": "2026-11-12T14:59:05.640Z"
+      },
+      "rules": [
+        {
+          "kind": "base_model",
+          "target": "court-low-01",
+          "label": "Court Low — par base",
+          "amount": 89,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "base_model",
+          "target": "sneaker-low-01",
+          "label": "Classic Low (provisional) — par base",
+          "amount": 79,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {},
+      "expected": {
+        "currency": "USD",
+        "basePrice": 89,
+        "customization": 0,
+        "extras": 0,
+        "total": 89,
+        "lines": [
+          {
+            "code": "base",
+            "label": "Court Low — par base",
+            "qty": 1,
+            "unit": 89,
+            "amount": 89,
+            "group": "base"
+          }
+        ],
+        "complexity": 0
+      }
+    },
+    {
+      "name": "color en punta y texto",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_f1de4673-c133-4e7f-89f8-acab7799232b",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#ff0000"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#ff0000"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [
+          {
+            "id": "t-outer",
+            "name": "T",
+            "kind": "text",
+            "shoe": "right",
+            "zoneId": "outer",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.4,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "text": "LAB",
+            "font": "geist",
+            "weight": 800,
+            "italic": false,
+            "size": 0.2,
+            "letterSpacing": 0,
+            "fill": "#000000",
+            "strokeWidth": 0,
+            "curve": 0,
+            "align": "center"
+          }
+        ],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.648Z",
+        "updatedAt": "2026-11-12T14:59:05.649Z"
+      },
+      "rules": [
+        {
+          "kind": "base_model",
+          "target": "court-low-01",
+          "label": "Court Low — par base",
+          "amount": 89,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "base_model",
+          "target": "sneaker-low-01",
+          "label": "Classic Low (provisional) — par base",
+          "amount": 79,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {},
+      "expected": {
+        "currency": "USD",
+        "basePrice": 89,
+        "customization": 22,
+        "extras": 0,
+        "total": 111,
+        "lines": [
+          {
+            "code": "base",
+            "label": "Court Low — par base",
+            "qty": 1,
+            "unit": 89,
+            "amount": 89,
+            "group": "base"
+          },
+          {
+            "code": "zones",
+            "label": "Zona personalizada",
+            "qty": 3,
+            "unit": 6,
+            "amount": 18,
+            "group": "customization"
+          },
+          {
+            "code": "texts",
+            "label": "Texto personalizado",
+            "qty": 1,
+            "unit": 4,
+            "amount": 4,
+            "group": "customization"
+          }
+        ],
+        "complexity": 0.15
+      }
+    },
+    {
+      "name": "material gamuza + extras",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_14edd0f1-2620-42a8-a888-dfdf22c55873",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0",
+                "material": "suede"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.649Z",
+        "updatedAt": "2026-11-12T14:59:05.649Z"
+      },
+      "rules": [
+        {
+          "kind": "base_model",
+          "target": "court-low-01",
+          "label": "Court Low — par base",
+          "amount": 89,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "base_model",
+          "target": "sneaker-low-01",
+          "label": "Classic Low (provisional) — par base",
+          "amount": 79,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {
+        "finish": "gloss",
+        "services": [
+          "gift-box",
+          "no-existe"
+        ]
+      },
+      "expected": {
+        "currency": "USD",
+        "basePrice": 89,
+        "customization": 6.9,
+        "extras": 20,
+        "total": 115.9,
+        "lines": [
+          {
+            "code": "base",
+            "label": "Court Low — par base",
+            "qty": 1,
+            "unit": 89,
+            "amount": 89,
+            "group": "base"
+          },
+          {
+            "code": "zones",
+            "label": "Zona personalizada",
+            "qty": 1,
+            "unit": 6,
+            "amount": 6,
+            "group": "customization"
+          },
+          {
+            "code": "materials",
+            "label": "Materiales especiales",
+            "qty": 1,
+            "unit": 0.9,
+            "amount": 0.9,
+            "group": "customization"
+          },
+          {
+            "code": "finish:gloss",
+            "label": "Acabado brillante",
+            "qty": 1,
+            "unit": 12,
+            "amount": 12,
+            "group": "extras"
+          },
+          {
+            "code": "service:gift-box",
+            "label": "Caja de regalo",
+            "qty": 1,
+            "unit": 8,
+            "amount": 8,
+            "group": "extras"
+          }
+        ],
+        "complexity": 0.03
+      }
+    },
+    {
+      "name": "capa oculta y per_zone inactiva",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_a4d8cea2-a560-46c9-b779-1d30067285f6",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [
+          {
+            "id": "t-outer",
+            "name": "T",
+            "kind": "text",
+            "shoe": "right",
+            "zoneId": "outer",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.4,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": false,
+            "text": "LAB",
+            "font": "geist",
+            "weight": 800,
+            "italic": false,
+            "size": 0.2,
+            "letterSpacing": 0,
+            "fill": "#000000",
+            "strokeWidth": 0,
+            "curve": 0,
+            "align": "center"
+          }
+        ],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.649Z",
+        "updatedAt": "2026-11-12T14:59:05.649Z"
+      },
+      "rules": [
+        {
+          "kind": "base_model",
+          "target": "court-low-01",
+          "label": "Court Low — par base",
+          "amount": 89,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "base_model",
+          "target": "sneaker-low-01",
+          "label": "Classic Low (provisional) — par base",
+          "amount": 79,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": false
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {},
+      "expected": {
+        "currency": "USD",
+        "basePrice": 89,
+        "customization": 0,
+        "extras": 0,
+        "total": 89,
+        "lines": [
+          {
+            "code": "base",
+            "label": "Court Low — par base",
+            "qty": 1,
+            "unit": 89,
+            "amount": 89,
+            "group": "base"
+          }
+        ],
+        "complexity": 0
+      }
+    },
+    {
+      "name": "complejo",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_8e724cae-16c5-41d0-aad1-9cf087fe7877",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#222222"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#222222"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [
+          {
+            "id": "t-toe",
+            "name": "T",
+            "kind": "text",
+            "shoe": "right",
+            "zoneId": "toe",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.4,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "text": "LAB",
+            "font": "geist",
+            "weight": 800,
+            "italic": false,
+            "size": 0.2,
+            "letterSpacing": 0,
+            "fill": "#000000",
+            "strokeWidth": 0,
+            "curve": 0,
+            "align": "center",
+            "mask": "circle",
+            "mirror": true
+          },
+          {
+            "id": "t-outer",
+            "name": "T",
+            "kind": "text",
+            "shoe": "right",
+            "zoneId": "outer",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.4,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "text": "LAB",
+            "font": "geist",
+            "weight": 800,
+            "italic": false,
+            "size": 0.2,
+            "letterSpacing": 0,
+            "fill": "#000000",
+            "strokeWidth": 0,
+            "curve": 0,
+            "align": "center",
+            "mask": "circle",
+            "mirror": true
+          },
+          {
+            "id": "t-heel",
+            "name": "T",
+            "kind": "text",
+            "shoe": "right",
+            "zoneId": "heel",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.4,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "text": "LAB",
+            "font": "geist",
+            "weight": 800,
+            "italic": false,
+            "size": 0.2,
+            "letterSpacing": 0,
+            "fill": "#000000",
+            "strokeWidth": 0,
+            "curve": 0,
+            "align": "center",
+            "mask": "circle",
+            "mirror": true
+          },
+          {
+            "id": "t-tongue",
+            "name": "T",
+            "kind": "text",
+            "shoe": "right",
+            "zoneId": "tongue",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.4,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "text": "LAB",
+            "font": "geist",
+            "weight": 800,
+            "italic": false,
+            "size": 0.2,
+            "letterSpacing": 0,
+            "fill": "#000000",
+            "strokeWidth": 0,
+            "curve": 0,
+            "align": "center",
+            "mask": "circle",
+            "mirror": true
+          }
+        ],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.649Z",
+        "updatedAt": "2026-11-12T14:59:05.650Z"
+      },
+      "rules": [
+        {
+          "kind": "base_model",
+          "target": "court-low-01",
+          "label": "Court Low — par base",
+          "amount": 89,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "base_model",
+          "target": "sneaker-low-01",
+          "label": "Classic Low (provisional) — par base",
+          "amount": 79,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {},
+      "expected": {
+        "currency": "USD",
+        "basePrice": 89,
+        "customization": 61.62,
+        "extras": 0,
+        "total": 150.62,
+        "lines": [
+          {
+            "code": "base",
+            "label": "Court Low — par base",
+            "qty": 1,
+            "unit": 89,
+            "amount": 89,
+            "group": "base"
+          },
+          {
+            "code": "zones",
+            "label": "Zona personalizada",
+            "qty": 6,
+            "unit": 6,
+            "amount": 36,
+            "group": "customization"
+          },
+          {
+            "code": "texts",
+            "label": "Texto personalizado",
+            "qty": 4,
+            "unit": 4,
+            "amount": 16,
+            "group": "customization"
+          },
+          {
+            "code": "complexity",
+            "label": "Diseño complejo",
+            "qty": 1,
+            "unit": 9.62,
+            "amount": 9.62,
+            "group": "customization"
+          }
+        ],
+        "complexity": 0.74
+      }
+    },
+    {
+      "name": "mixto: mallas, imágenes, patrón, curvas",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_f307ea8c-98c2-4c55-92ac-fc6207598314",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0",
+                "material": "mesh"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#ABCDEF"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0",
+                "material": "mesh"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0",
+                "material": "suede"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [
+          {
+            "id": "i-right-outer",
+            "name": "I",
+            "kind": "image",
+            "shoe": "right",
+            "zoneId": "outer",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.3,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "assetId": "a1"
+          },
+          {
+            "id": "i-left-heel",
+            "name": "I",
+            "kind": "image",
+            "shoe": "left",
+            "zoneId": "heel",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.3,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "assetId": "a1",
+            "repeat": {
+              "count": 3,
+              "gap": 0.1,
+              "direction": "horizontal"
+            }
+          },
+          {
+            "id": "p-inner",
+            "name": "P",
+            "kind": "pattern",
+            "shoe": "left",
+            "zoneId": "inner",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 1,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "pattern": "stripes",
+            "colorA": "#000000",
+            "colorB": "#ffffff",
+            "scale": 0.5,
+            "height": 1
+          },
+          {
+            "id": "t-tongue",
+            "name": "T",
+            "kind": "text",
+            "shoe": "right",
+            "zoneId": "tongue",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.4,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "text": "LAB",
+            "font": "geist",
+            "weight": 800,
+            "italic": false,
+            "size": 0.2,
+            "letterSpacing": 0,
+            "fill": "#000000",
+            "strokeWidth": 0,
+            "curve": 0.4,
+            "align": "center"
+          },
+          {
+            "id": "t-toe",
+            "name": "T",
+            "kind": "text",
+            "shoe": "right",
+            "zoneId": "toe",
+            "x": 0.5,
+            "y": 0.5,
+            "width": 0.4,
+            "rotation": 0,
+            "opacity": 1,
+            "flipX": false,
+            "visible": true,
+            "text": "LAB",
+            "font": "geist",
+            "weight": 800,
+            "italic": false,
+            "size": 0.2,
+            "letterSpacing": 0,
+            "fill": "#000000",
+            "strokeWidth": 0,
+            "curve": 0.01,
+            "align": "center"
+          }
+        ],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.650Z",
+        "updatedAt": "2026-11-12T14:59:05.650Z"
+      },
+      "rules": [
+        {
+          "kind": "base_model",
+          "target": "court-low-01",
+          "label": "Court Low — par base",
+          "amount": 89,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "base_model",
+          "target": "sneaker-low-01",
+          "label": "Classic Low (provisional) — par base",
+          "amount": 79,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {
+        "finish": "matte-protect",
+        "services": [
+          "express"
+        ]
+      },
+      "expected": {
+        "currency": "USD",
+        "basePrice": 89,
+        "customization": 87.68,
+        "extras": 37,
+        "total": 213.68,
+        "lines": [
+          {
+            "code": "base",
+            "label": "Court Low — par base",
+            "qty": 1,
+            "unit": 89,
+            "amount": 89,
+            "group": "base"
+          },
+          {
+            "code": "zones",
+            "label": "Zona personalizada",
+            "qty": 7,
+            "unit": 6,
+            "amount": 42,
+            "group": "customization"
+          },
+          {
+            "code": "materials",
+            "label": "Materiales especiales",
+            "qty": 1,
+            "unit": 2.1,
+            "amount": 2.1,
+            "group": "customization"
+          },
+          {
+            "code": "images",
+            "label": "Ilustración impresa",
+            "qty": 2,
+            "unit": 9,
+            "amount": 18,
+            "group": "customization"
+          },
+          {
+            "code": "texts",
+            "label": "Texto personalizado",
+            "qty": 2,
+            "unit": 4,
+            "amount": 8,
+            "group": "customization"
+          },
+          {
+            "code": "patterns",
+            "label": "Patrón",
+            "qty": 1,
+            "unit": 5,
+            "amount": 5,
+            "group": "customization"
+          },
+          {
+            "code": "complexity",
+            "label": "Diseño complejo",
+            "qty": 1,
+            "unit": 12.58,
+            "amount": 12.58,
+            "group": "customization"
+          },
+          {
+            "code": "finish:matte-protect",
+            "label": "Acabado protector mate",
+            "qty": 1,
+            "unit": 12,
+            "amount": 12,
+            "group": "extras"
+          },
+          {
+            "code": "service:express",
+            "label": "Producción exprés (7 días)",
+            "qty": 1,
+            "unit": 25,
+            "amount": 25,
+            "group": "extras"
+          }
+        ],
+        "complexity": 0.67
+      }
+    },
+    {
+      "name": "color en mayúsculas igual al de fábrica",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_352594fc-9fa5-4d7c-abe1-4bbc9a2b3fff",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#F4F3F0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.650Z",
+        "updatedAt": "2026-11-12T14:59:05.650Z"
+      },
+      "rules": [
+        {
+          "kind": "base_model",
+          "target": "court-low-01",
+          "label": "Court Low — par base",
+          "amount": 89,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "base_model",
+          "target": "sneaker-low-01",
+          "label": "Classic Low (provisional) — par base",
+          "amount": 79,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {},
+      "expected": {
+        "currency": "USD",
+        "basePrice": 89,
+        "customization": 0,
+        "extras": 0,
+        "total": 89,
+        "lines": [
+          {
+            "code": "base",
+            "label": "Court Low — par base",
+            "qty": 1,
+            "unit": 89,
+            "amount": 89,
+            "group": "base"
+          }
+        ],
+        "complexity": 0
+      }
+    },
+    {
+      "name": "regla específica de zona ignorada (target) usa genérica",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_472718d0-3d4a-477a-9b3f-02e2b9a3befa",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#010203"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.650Z",
+        "updatedAt": "2026-11-12T14:59:05.650Z"
+      },
+      "rules": [
+        {
+          "kind": "base_model",
+          "target": "court-low-01",
+          "label": "Court Low — par base",
+          "amount": 89,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "base_model",
+          "target": "sneaker-low-01",
+          "label": "Classic Low (provisional) — par base",
+          "amount": 79,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_zone",
+          "target": "heel",
+          "label": "Talón",
+          "amount": 50,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {},
+      "expected": {
+        "currency": "USD",
+        "basePrice": 89,
+        "customization": 6,
+        "extras": 0,
+        "total": 95,
+        "lines": [
+          {
+            "code": "base",
+            "label": "Court Low — par base",
+            "qty": 1,
+            "unit": 89,
+            "amount": 89,
+            "group": "base"
+          },
+          {
+            "code": "zones",
+            "label": "Zona personalizada",
+            "qty": 1,
+            "unit": 6,
+            "amount": 6,
+            "group": "customization"
+          }
+        ],
+        "complexity": 0.03
+      }
+    },
+    {
+      "name": "sin precio base",
+      "doc": {
+        "schemaVersion": 2,
+        "id": "dsg_00fb01b0-1c2f-4bd6-8ab7-e916c1c34816",
+        "name": "Diseño sin título",
+        "modelId": "court-low-01",
+        "shoes": {
+          "right": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          },
+          "left": {
+            "zones": {
+              "toe": {
+                "color": "#f4f3f0"
+              },
+              "outer": {
+                "color": "#f4f3f0"
+              },
+              "inner": {
+                "color": "#f4f3f0"
+              },
+              "heel": {
+                "color": "#f4f3f0"
+              },
+              "upper": {
+                "color": "#f4f3f0"
+              },
+              "tongue": {
+                "color": "#f4f3f0"
+              },
+              "laces": {
+                "color": "#fafafa"
+              },
+              "eyelets": {
+                "color": "#b8b8b8"
+              },
+              "midsole": {
+                "color": "#f5f3ee"
+              },
+              "outsole": {
+                "color": "#d9d4c7"
+              },
+              "lining": {
+                "color": "#3a3f45"
+              },
+              "insole": {
+                "color": "#c9c5bd"
+              }
+            }
+          }
+        },
+        "layers": [],
+        "assets": {},
+        "createdAt": "2026-11-12T14:59:05.652Z",
+        "updatedAt": "2026-11-12T14:59:05.652Z"
+      },
+      "rules": [
+        {
+          "kind": "per_zone",
+          "target": null,
+          "label": "Zona personalizada",
+          "amount": 6,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_image",
+          "target": null,
+          "label": "Ilustración impresa",
+          "amount": 9,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_text",
+          "target": null,
+          "label": "Texto personalizado",
+          "amount": 4,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "per_pattern",
+          "target": null,
+          "label": "Patrón",
+          "amount": 5,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "suede",
+          "label": "Gamuza",
+          "amount": 0,
+          "factor": 1.15,
+          "active": true
+        },
+        {
+          "kind": "material_factor",
+          "target": "mesh",
+          "label": "Malla técnica",
+          "amount": 0,
+          "factor": 1.1,
+          "active": true
+        },
+        {
+          "kind": "complexity",
+          "target": null,
+          "label": "Diseño complejo",
+          "amount": 0,
+          "factor": 1.25,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "matte-protect",
+          "label": "Acabado protector mate",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "finish",
+          "target": "gloss",
+          "label": "Acabado brillante",
+          "amount": 12,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "gift-box",
+          "label": "Caja de regalo",
+          "amount": 8,
+          "factor": 1,
+          "active": true
+        },
+        {
+          "kind": "service",
+          "target": "express",
+          "label": "Producción exprés (7 días)",
+          "amount": 25,
+          "factor": 1,
+          "active": true
+        }
+      ],
+      "extras": {},
+      "expected": {
+        "error": "Sin precio base configurado para el modelo court-low-01"
+      }
+    }
+  ]
+}

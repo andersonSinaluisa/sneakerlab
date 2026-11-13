@@ -1,0 +1,23 @@
+{
+  "name": "sneakerlab/api",
+  "description": "SneakerLab 3D — API (Slim 4 + MySQL) para hosting compartido",
+  "type": "project",
+  "license": "proprietary",
+  "require": {
+    "php": ">=8.2",
+    "ext-json": "*",
+    "ext-pdo": "*",
+    "slim/slim": "^4.14",
+    "slim/psr7": "^1.7",
+    "firebase/php-jwt": "^7.0",
+    "opis/json-schema": "^2.4"
+  },
+  "autoload": {
+    "psr-4": { "SneakerLab\\": "src/" }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "sort-packages": true,
+    "platform": { "php": "8.2.0" }
+  }
+}

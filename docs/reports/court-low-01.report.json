@@ -1,0 +1,100 @@
+{
+  "errors": [],
+  "warnings": [],
+  "info": [
+    "Mallas de origen: Cube.006_WhiteSuede_0, Cube.005_WhiteSole_0, Cube.005_WhiteLeather_0, Cube.005_WhiteLeather_0_1, Cube.005_Normal_0, Cube.005_Insole_0, Cube.004_WhiteSuede_0, Cube.004_WhiteLeather_0, Plane_WhiteSatin_0, Cube.002_metal_0",
+    "Normalizado: largo 0.300 m, alto 0.127 m, ancho 0.112 m",
+    "Planta a media longitud: +Z 0.049 / −Z 0.041 → +Z es exterior (derecho)",
+    "toe: UV cylindrical (187°), proporción 2.35",
+    "outer: UV planar, proporción 3.12",
+    "inner: UV planar, proporción 3.10",
+    "heel: UV cylindrical (187°), proporción 2.03",
+    "tongue: UV planar, proporción 0.66",
+    "outsole: conserva normal map del asset",
+    "Triángulos totales (ambos zapatos): 94355",
+    "GLB escrito: public/models/court-low-01.glb (1402 KB)",
+    "Manifiesto escrito: src/config/models/court-low-01.json"
+  ],
+  "zones": {
+    "toe": {
+      "tris": 23877,
+      "uv": {
+        "aspect": 2.3537696501117744,
+        "mode": "cylindrical",
+        "arcDeg": 187
+      },
+      "left": {
+        "aspect": 2.3537696501117744,
+        "mode": "cylindrical",
+        "arcDeg": 187
+      }
+    },
+    "outer": {
+      "tris": 5892,
+      "uv": {
+        "aspect": 3.1152406621813586,
+        "mode": "planar"
+      },
+      "left": {
+        "aspect": 3.1152406621813586,
+        "mode": "planar"
+      }
+    },
+    "inner": {
+      "tris": 5892,
+      "uv": {
+        "aspect": 3.0996492219665015,
+        "mode": "planar"
+      },
+      "left": {
+        "aspect": 3.0996492219665015,
+        "mode": "planar"
+      }
+    },
+    "heel": {
+      "tris": 4888,
+      "uv": {
+        "aspect": 2.03058365227822,
+        "mode": "cylindrical",
+        "arcDeg": 187
+      },
+      "left": {
+        "aspect": 2.03058365227822,
+        "mode": "cylindrical",
+        "arcDeg": 187
+      }
+    },
+    "upper": {
+      "tris": 41862
+    },
+    "tongue": {
+      "tris": 3868,
+      "uv": {
+        "aspect": 0.6626057915158415,
+        "mode": "planar"
+      },
+      "left": {
+        "aspect": 0.6626057915158415,
+        "mode": "planar"
+      }
+    },
+    "laces": {
+      "tris": 7968
+    },
+    "eyelets": {
+      "tris": 64512
+    },
+    "midsole": {
+      "tris": 10296
+    },
+    "outsole": {
+      "tris": 6568
+    },
+    "lining": {
+      "tris": 12549
+    },
+    "insole": {
+      "tris": 9290
+    }
+  }
+}

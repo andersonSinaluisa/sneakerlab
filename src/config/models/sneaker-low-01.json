@@ -1,0 +1,278 @@
+{
+  "modelId": "sneaker-low-01",
+  "name": "Classic Low",
+  "version": 2,
+  "provisional": true,
+  "source": {
+    "type": "glb",
+    "url": "/models/sneaker-low-01.glb",
+    "compression": []
+  },
+  "unitScale": 0.1,
+  "shoes": {
+    "right": {
+      "nodeName": "Right",
+      "label": "Derecho"
+    },
+    "left": {
+      "nodeName": "Left",
+      "label": "Izquierdo"
+    }
+  },
+  "layout": {
+    "bothShoesGap": 0.3,
+    "focusHeight": 0.42
+  },
+  "liningColor": "#d9d6d0",
+  "zones": [
+    {
+      "id": "outer",
+      "label": "Lateral exterior",
+      "meshNames": {
+        "right": "R_OuterPanel",
+        "left": "L_OuterPanel"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "texture": {
+        "width": 2048,
+        "height": 720,
+        "printMm": {
+          "width": 179.5,
+          "height": 72.3
+        }
+      },
+      "defaultColor": "#f2f1ee",
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas",
+        "mesh"
+      ],
+      "stitchInset": 26,
+      "lining": true
+    },
+    {
+      "id": "inner",
+      "label": "Lateral interior",
+      "meshNames": {
+        "right": "R_InnerPanel",
+        "left": "L_InnerPanel"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "texture": {
+        "width": 2048,
+        "height": 720,
+        "printMm": {
+          "width": 179.3,
+          "height": 72.3
+        }
+      },
+      "defaultColor": "#f2f1ee",
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas",
+        "mesh"
+      ],
+      "stitchInset": 26,
+      "lining": true
+    },
+    {
+      "id": "toe",
+      "label": "Punta",
+      "meshNames": {
+        "right": "R_ToeCap",
+        "left": "L_ToeCap"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "texture": {
+        "width": 2048,
+        "height": 544,
+        "printMm": {
+          "width": 131.9,
+          "height": 54
+        }
+      },
+      "defaultColor": "#e9e8e4",
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas",
+        "rubber"
+      ],
+      "stitchInset": 24,
+      "lining": true
+    },
+    {
+      "id": "heel",
+      "label": "Talón",
+      "meshNames": {
+        "right": "R_HeelCounter",
+        "left": "L_HeelCounter"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "texture": {
+        "width": 1024,
+        "height": 744,
+        "printMm": {
+          "width": 105.6,
+          "height": 89.2
+        }
+      },
+      "defaultColor": "#e9e8e4",
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas"
+      ],
+      "stitchInset": 16,
+      "lining": true
+    },
+    {
+      "id": "tongue",
+      "label": "Lengüeta",
+      "meshNames": {
+        "right": "R_Tongue",
+        "left": "L_Tongue"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "texture": {
+        "width": 1024,
+        "height": 432,
+        "printMm": {
+          "width": 148.1,
+          "height": 57.9
+        }
+      },
+      "defaultColor": "#f5f5f4",
+      "material": "canvas",
+      "materialOptions": [
+        "canvas",
+        "mesh",
+        "leather"
+      ],
+      "lining": true
+    },
+    {
+      "id": "laces",
+      "label": "Cordones",
+      "meshNames": {
+        "right": "R_Laces",
+        "left": "L_Laces"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": false,
+      "defaultColor": "#fafafa",
+      "material": "lace"
+    },
+    {
+      "id": "eyelets",
+      "label": "Ojales",
+      "meshNames": {
+        "right": "R_Eyelets",
+        "left": "L_Eyelets"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": false,
+      "defaultColor": "#9a9a9a",
+      "material": "metal"
+    },
+    {
+      "id": "midsole",
+      "label": "Entresuela",
+      "meshNames": {
+        "right": "R_Midsole",
+        "left": "L_Midsole"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": true,
+      "defaultColor": "#f7f6f2",
+      "material": "foam",
+      "materialOptions": [
+        "foam",
+        "rubber"
+      ]
+    },
+    {
+      "id": "outsole",
+      "label": "Suela",
+      "meshNames": {
+        "right": "R_Outsole",
+        "left": "L_Outsole"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": false,
+      "defaultColor": "#2b2b2e",
+      "material": "rubber"
+    },
+    {
+      "id": "collar",
+      "label": "Cuello acolchado",
+      "meshNames": {
+        "right": "R_Collar",
+        "left": "L_Collar"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": false,
+      "defaultColor": "#d9d6d0",
+      "material": "canvas"
+    },
+    {
+      "id": "insole",
+      "label": "Plantilla",
+      "meshNames": {
+        "right": "R_Insole",
+        "left": "L_Insole"
+      },
+      "customizable": false,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": false,
+      "allowMaterials": false,
+      "defaultColor": "#c9c5bd",
+      "material": "canvas"
+    }
+  ],
+  "print": {
+    "referenceSizeEU": 42.5
+  }
+}

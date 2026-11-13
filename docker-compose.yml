@@ -1,0 +1,48 @@
+# Desarrollo local con la misma forma que Hostinger:
+#   /srv/site/public_html   ← dist/ del frontend + hosting/public_html (.htaccess, api/index.php)
+#   /srv/site/sneakerlab-api ← api/ (Slim + vendor), fuera del docroot
+# Uso: npm run hosting:up  → http://localhost:8080 (API y SPA compiladas)
+#      npm run dev         → http://localhost:3000 (Vite con proxy de /api a :8080)
+services:
+  web:
+    build: ./hosting
+    ports:
+      - "8080:80"
+    environment:
+      APP_ENV: ${APP_ENV:-development}
+      DB_HOST: db
+      DB_NAME: sneakerlab
+      DB_USER: sneakerlab
+      DB_PASSWORD: sneakerlab
+      JWT_SECRET: dev-secret-change-me-please-32chars!!
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@sneakerlab.local}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin-pass-123}
+      STORAGE_DIR: /srv/site/sneakerlab-api/storage/uploads
+    volumes:
+      - ./dist:/srv/site/public_html
+      - ./hosting/public_html/.htaccess:/srv/site/public_html/.htaccess:ro
+      - ./hosting/public_html/api:/srv/site/public_html/api:ro
+      - ./api:/srv/site/sneakerlab-api
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: sneakerlab
+      MYSQL_USER: sneakerlab
+      MYSQL_PASSWORD: sneakerlab
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "127.0.0.1:3307:3306"
+    volumes:
+      - mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+volumes:
+  mysql:

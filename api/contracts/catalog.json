@@ -1,0 +1,624 @@
+{
+  "models": [
+    {
+      "modelId": "court-low-01",
+      "name": "Court Low",
+      "version": 1,
+      "provisional": false,
+      "zones": [
+        {
+          "id": "toe",
+          "label": "Punta",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "outer",
+          "label": "Lateral exterior",
+          "material": "suede",
+          "materialOptions": [
+            "suede",
+            "leather",
+            "canvas",
+            "mesh"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "inner",
+          "label": "Lateral interior",
+          "material": "suede",
+          "materialOptions": [
+            "suede",
+            "leather",
+            "canvas",
+            "mesh"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "heel",
+          "label": "Talón",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "upper",
+          "label": "Empeine y cuello",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas"
+          ],
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "tongue",
+          "label": "Lengüeta",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "canvas",
+            "mesh"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "laces",
+          "label": "Cordones",
+          "material": "lace",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#fafafa"
+        },
+        {
+          "id": "eyelets",
+          "label": "Ojales",
+          "material": "metal",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#b8b8b8"
+        },
+        {
+          "id": "midsole",
+          "label": "Entresuela",
+          "material": "foam",
+          "materialOptions": [
+            "foam",
+            "rubber"
+          ],
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#f5f3ee"
+        },
+        {
+          "id": "outsole",
+          "label": "Suela",
+          "material": "rubber",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#d9d4c7"
+        },
+        {
+          "id": "lining",
+          "label": "Forro interior",
+          "material": "canvas",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#3a3f45"
+        },
+        {
+          "id": "insole",
+          "label": "Plantilla",
+          "material": "canvas",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#c9c5bd"
+        }
+      ]
+    },
+    {
+      "modelId": "court-classic-01",
+      "name": "Court Classic",
+      "version": 1,
+      "provisional": false,
+      "zones": [
+        {
+          "id": "toe",
+          "label": "Puntera",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "outer",
+          "label": "Lateral exterior",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas",
+            "mesh"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "inner",
+          "label": "Lateral interior",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas",
+            "mesh"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "quarter",
+          "label": "Panel trasero",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas"
+          ],
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "heel",
+          "label": "Talonera",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "upper",
+          "label": "Empeine y ojalera",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas"
+          ],
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "tongue",
+          "label": "Lengüeta",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "canvas",
+            "mesh"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f4f3f0"
+        },
+        {
+          "id": "laces",
+          "label": "Cordones",
+          "material": "lace",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#fafafa"
+        },
+        {
+          "id": "eyelets",
+          "label": "Ojales",
+          "material": "metal",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#c9c9c9"
+        },
+        {
+          "id": "stitching",
+          "label": "Costuras",
+          "material": "lace",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#e6e3dc"
+        },
+        {
+          "id": "midsole",
+          "label": "Entresuela",
+          "material": "rubber",
+          "materialOptions": [
+            "rubber",
+            "foam"
+          ],
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#f5f3ee"
+        },
+        {
+          "id": "outsole",
+          "label": "Suela",
+          "material": "rubber",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#ebe8e1"
+        },
+        {
+          "id": "lining",
+          "label": "Forro interior",
+          "material": "canvas",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#e4e2dc"
+        }
+      ]
+    },
+    {
+      "modelId": "sneaker-low-01",
+      "name": "Classic Low",
+      "version": 2,
+      "provisional": true,
+      "zones": [
+        {
+          "id": "outer",
+          "label": "Lateral exterior",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas",
+            "mesh"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f2f1ee"
+        },
+        {
+          "id": "inner",
+          "label": "Lateral interior",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas",
+            "mesh"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f2f1ee"
+        },
+        {
+          "id": "toe",
+          "label": "Punta",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas",
+            "rubber"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#e9e8e4"
+        },
+        {
+          "id": "heel",
+          "label": "Talón",
+          "material": "leather",
+          "materialOptions": [
+            "leather",
+            "suede",
+            "canvas"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#e9e8e4"
+        },
+        {
+          "id": "tongue",
+          "label": "Lengüeta",
+          "material": "canvas",
+          "materialOptions": [
+            "canvas",
+            "mesh",
+            "leather"
+          ],
+          "allowImages": true,
+          "allowText": true,
+          "defaultColor": "#f5f5f4"
+        },
+        {
+          "id": "laces",
+          "label": "Cordones",
+          "material": "lace",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#fafafa"
+        },
+        {
+          "id": "eyelets",
+          "label": "Ojales",
+          "material": "metal",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#9a9a9a"
+        },
+        {
+          "id": "midsole",
+          "label": "Entresuela",
+          "material": "foam",
+          "materialOptions": [
+            "foam",
+            "rubber"
+          ],
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#f7f6f2"
+        },
+        {
+          "id": "outsole",
+          "label": "Suela",
+          "material": "rubber",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#2b2b2e"
+        },
+        {
+          "id": "collar",
+          "label": "Cuello acolchado",
+          "material": "canvas",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#d9d6d0"
+        },
+        {
+          "id": "insole",
+          "label": "Plantilla",
+          "material": "canvas",
+          "allowImages": false,
+          "allowText": false,
+          "defaultColor": "#c9c5bd"
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "leather",
+      "label": "Cuero sintético",
+      "priceFactor": 1
+    },
+    {
+      "id": "suede",
+      "label": "Gamuza",
+      "priceFactor": 1.15
+    },
+    {
+      "id": "canvas",
+      "label": "Lona",
+      "priceFactor": 0.9
+    },
+    {
+      "id": "mesh",
+      "label": "Malla técnica",
+      "priceFactor": 1.1
+    },
+    {
+      "id": "rubber",
+      "label": "Caucho",
+      "priceFactor": 1
+    },
+    {
+      "id": "foam",
+      "label": "Espuma EVA",
+      "priceFactor": 1
+    },
+    {
+      "id": "lace",
+      "label": "Cordón textil",
+      "priceFactor": 1
+    },
+    {
+      "id": "metal",
+      "label": "Metal",
+      "priceFactor": 1.2
+    }
+  ],
+  "categories": [
+    {
+      "id": "manga-bw",
+      "label": "Manga Black & White",
+      "group": "anime"
+    },
+    {
+      "id": "anime-full-color",
+      "label": "Anime Full Color",
+      "group": "anime"
+    },
+    {
+      "id": "dark-anime",
+      "label": "Dark Anime",
+      "group": "anime"
+    },
+    {
+      "id": "shonen-battle",
+      "label": "Shonen Battle",
+      "group": "anime"
+    },
+    {
+      "id": "samurai-anime",
+      "label": "Samurai Anime",
+      "group": "anime"
+    },
+    {
+      "id": "cyberpunk-anime",
+      "label": "Cyberpunk Anime",
+      "group": "anime"
+    },
+    {
+      "id": "manga-panels",
+      "label": "Manga Panels",
+      "group": "anime"
+    },
+    {
+      "id": "anime-eyes",
+      "label": "Anime Eyes",
+      "group": "anime"
+    },
+    {
+      "id": "anime-minimalist",
+      "label": "Anime Minimalist",
+      "group": "anime"
+    },
+    {
+      "id": "chibi-kawaii",
+      "label": "Chibi Kawaii",
+      "group": "anime"
+    },
+    {
+      "id": "mecha-anime",
+      "label": "Mecha Anime",
+      "group": "anime"
+    },
+    {
+      "id": "anime-fantasy",
+      "label": "Anime Fantasy",
+      "group": "anime"
+    },
+    {
+      "id": "anime-streetwear",
+      "label": "Anime Streetwear",
+      "group": "anime"
+    },
+    {
+      "id": "anime-retro-90s",
+      "label": "Anime Retro 90s",
+      "group": "anime"
+    },
+    {
+      "id": "anime-graffiti",
+      "label": "Anime Graffiti",
+      "group": "anime"
+    },
+    {
+      "id": "japanese-dragons",
+      "label": "Japanese Dragons",
+      "group": "japan"
+    },
+    {
+      "id": "oni-masks",
+      "label": "Oni Masks",
+      "group": "japan"
+    },
+    {
+      "id": "sakura",
+      "label": "Sakura",
+      "group": "japan"
+    },
+    {
+      "id": "japanese-waves",
+      "label": "Japanese Waves",
+      "group": "japan"
+    },
+    {
+      "id": "kanji-typography",
+      "label": "Kanji Typography",
+      "group": "japan"
+    },
+    {
+      "id": "graffiti",
+      "label": "Graffiti",
+      "group": "urban"
+    },
+    {
+      "id": "street-art",
+      "label": "Street Art",
+      "group": "urban"
+    },
+    {
+      "id": "comic-book",
+      "label": "Comic Book",
+      "group": "urban"
+    },
+    {
+      "id": "gothic",
+      "label": "Gothic",
+      "group": "urban"
+    },
+    {
+      "id": "minimal-line-art",
+      "label": "Minimal Line Art",
+      "group": "urban"
+    },
+    {
+      "id": "neon",
+      "label": "Neon",
+      "group": "urban"
+    },
+    {
+      "id": "abstract",
+      "label": "Abstract",
+      "group": "urban"
+    },
+    {
+      "id": "gaming",
+      "label": "Gaming",
+      "group": "urban"
+    },
+    {
+      "id": "geometric",
+      "label": "Geometric",
+      "group": "urban"
+    },
+    {
+      "id": "custom-typography",
+      "label": "Custom Typography",
+      "group": "urban"
+    }
+  ],
+  "groups": {
+    "anime": "Anime y manga",
+    "japan": "Cultura japonesa",
+    "urban": "Otros estilos"
+  }
+}

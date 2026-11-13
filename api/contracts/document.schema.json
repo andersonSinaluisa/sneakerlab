@@ -1,0 +1,665 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "number",
+      "const": 2
+    },
+    "id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "modelId": {
+      "type": "string"
+    },
+    "shoes": {
+      "type": "object",
+      "properties": {
+        "right": {
+          "type": "object",
+          "properties": {
+            "zones": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "type": "object",
+                "properties": {
+                  "color": {
+                    "type": "string"
+                  },
+                  "material": {
+                    "type": "string",
+                    "enum": [
+                      "leather",
+                      "suede",
+                      "canvas",
+                      "mesh",
+                      "rubber",
+                      "foam",
+                      "lace",
+                      "metal"
+                    ]
+                  }
+                },
+                "required": [
+                  "color"
+                ]
+              }
+            }
+          },
+          "required": [
+            "zones"
+          ]
+        },
+        "left": {
+          "type": "object",
+          "properties": {
+            "zones": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {
+                "type": "object",
+                "properties": {
+                  "color": {
+                    "type": "string"
+                  },
+                  "material": {
+                    "type": "string",
+                    "enum": [
+                      "leather",
+                      "suede",
+                      "canvas",
+                      "mesh",
+                      "rubber",
+                      "foam",
+                      "lace",
+                      "metal"
+                    ]
+                  }
+                },
+                "required": [
+                  "color"
+                ]
+              }
+            }
+          },
+          "required": [
+            "zones"
+          ]
+        }
+      },
+      "required": [
+        "right",
+        "left"
+      ]
+    },
+    "layers": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "shoe": {
+                "type": "string",
+                "enum": [
+                  "right",
+                  "left"
+                ]
+              },
+              "zoneId": {
+                "type": "string"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 5
+              },
+              "rotation": {
+                "type": "number"
+              },
+              "opacity": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "flipX": {
+                "type": "boolean"
+              },
+              "visible": {
+                "type": "boolean"
+              },
+              "mask": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "circle",
+                  "rounded",
+                  "diamond",
+                  "star",
+                  "hexagon"
+                ]
+              },
+              "repeat": {
+                "type": "object",
+                "properties": {
+                  "count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 12
+                  },
+                  "gap": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 2
+                  },
+                  "direction": {
+                    "type": "string",
+                    "enum": [
+                      "horizontal",
+                      "vertical"
+                    ]
+                  }
+                },
+                "required": [
+                  "count",
+                  "gap",
+                  "direction"
+                ]
+              },
+              "mirror": {
+                "type": "boolean"
+              },
+              "kind": {
+                "type": "string",
+                "const": "image"
+              },
+              "assetId": {
+                "type": "string"
+              },
+              "crop": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "number"
+                  },
+                  "y": {
+                    "type": "number"
+                  },
+                  "w": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  },
+                  "h": {
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                  }
+                },
+                "required": [
+                  "x",
+                  "y",
+                  "w",
+                  "h"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "shoe",
+              "zoneId",
+              "x",
+              "y",
+              "width",
+              "rotation",
+              "opacity",
+              "flipX",
+              "visible",
+              "kind",
+              "assetId"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "shoe": {
+                "type": "string",
+                "enum": [
+                  "right",
+                  "left"
+                ]
+              },
+              "zoneId": {
+                "type": "string"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 5
+              },
+              "rotation": {
+                "type": "number"
+              },
+              "opacity": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "flipX": {
+                "type": "boolean"
+              },
+              "visible": {
+                "type": "boolean"
+              },
+              "mask": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "circle",
+                  "rounded",
+                  "diamond",
+                  "star",
+                  "hexagon"
+                ]
+              },
+              "repeat": {
+                "type": "object",
+                "properties": {
+                  "count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 12
+                  },
+                  "gap": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 2
+                  },
+                  "direction": {
+                    "type": "string",
+                    "enum": [
+                      "horizontal",
+                      "vertical"
+                    ]
+                  }
+                },
+                "required": [
+                  "count",
+                  "gap",
+                  "direction"
+                ]
+              },
+              "mirror": {
+                "type": "boolean"
+              },
+              "kind": {
+                "type": "string",
+                "const": "text"
+              },
+              "text": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "font": {
+                "type": "string",
+                "enum": [
+                  "geist",
+                  "geist-mono",
+                  "serif",
+                  "display",
+                  "script",
+                  "mono-system"
+                ]
+              },
+              "weight": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "const": 400
+                  },
+                  {
+                    "type": "number",
+                    "const": 600
+                  },
+                  {
+                    "type": "number",
+                    "const": 800
+                  }
+                ]
+              },
+              "italic": {
+                "type": "boolean"
+              },
+              "size": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 2
+              },
+              "letterSpacing": {
+                "type": "number",
+                "minimum": -0.2,
+                "maximum": 1
+              },
+              "fill": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "stroke": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "strokeWidth": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 0.5
+              },
+              "curve": {
+                "type": "number",
+                "minimum": -1,
+                "maximum": 1
+              },
+              "align": {
+                "type": "string",
+                "enum": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "shoe",
+              "zoneId",
+              "x",
+              "y",
+              "width",
+              "rotation",
+              "opacity",
+              "flipX",
+              "visible",
+              "kind",
+              "text",
+              "font",
+              "weight",
+              "italic",
+              "size",
+              "letterSpacing",
+              "fill",
+              "strokeWidth",
+              "curve",
+              "align"
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "shoe": {
+                "type": "string",
+                "enum": [
+                  "right",
+                  "left"
+                ]
+              },
+              "zoneId": {
+                "type": "string"
+              },
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 5
+              },
+              "rotation": {
+                "type": "number"
+              },
+              "opacity": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "flipX": {
+                "type": "boolean"
+              },
+              "visible": {
+                "type": "boolean"
+              },
+              "mask": {
+                "type": "string",
+                "enum": [
+                  "none",
+                  "circle",
+                  "rounded",
+                  "diamond",
+                  "star",
+                  "hexagon"
+                ]
+              },
+              "repeat": {
+                "type": "object",
+                "properties": {
+                  "count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 12
+                  },
+                  "gap": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 2
+                  },
+                  "direction": {
+                    "type": "string",
+                    "enum": [
+                      "horizontal",
+                      "vertical"
+                    ]
+                  }
+                },
+                "required": [
+                  "count",
+                  "gap",
+                  "direction"
+                ]
+              },
+              "mirror": {
+                "type": "boolean"
+              },
+              "kind": {
+                "type": "string",
+                "const": "pattern"
+              },
+              "pattern": {
+                "type": "string",
+                "enum": [
+                  "stripes",
+                  "dots",
+                  "checker",
+                  "chevron",
+                  "stars",
+                  "grid",
+                  "diagonal",
+                  "scales"
+                ]
+              },
+              "colorA": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "colorB": {
+                "type": "string",
+                "pattern": "^#[0-9a-fA-F]{6}$"
+              },
+              "scale": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 2
+              },
+              "height": {
+                "type": "number",
+                "exclusiveMinimum": 0,
+                "maximum": 3
+              }
+            },
+            "required": [
+              "id",
+              "name",
+              "shoe",
+              "zoneId",
+              "x",
+              "y",
+              "width",
+              "rotation",
+              "opacity",
+              "flipX",
+              "visible",
+              "kind",
+              "pattern",
+              "colorA",
+              "colorB",
+              "scale",
+              "height"
+            ]
+          }
+        ]
+      }
+    },
+    "assets": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "mime": {
+            "type": "string"
+          },
+          "width": {
+            "type": "number"
+          },
+          "height": {
+            "type": "number"
+          },
+          "bytes": {
+            "type": "number"
+          },
+          "createdAt": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "rasterSize": {
+            "type": "number"
+          },
+          "original": {
+            "type": "object",
+            "properties": {
+              "mime": {
+                "type": "string"
+              },
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              },
+              "bytes": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "mime",
+              "width",
+              "height",
+              "bytes"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "mime",
+          "width",
+          "height",
+          "bytes",
+          "createdAt"
+        ]
+      }
+    },
+    "createdAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "modelId",
+    "shoes",
+    "layers",
+    "assets",
+    "createdAt",
+    "updatedAt"
+  ]
+}

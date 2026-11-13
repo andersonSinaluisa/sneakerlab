@@ -1,0 +1,16 @@
+# Override para `npm run test:api`: API con APP_ENV=test, base de datos efímera y otro puerto.
+services:
+  web:
+    ports: !override
+      - "8090:80"
+    environment:
+      APP_ENV: test
+      JWT_SECRET: test-secret-test-secret-test-secret
+      ADMIN_EMAIL: admin@test.local
+      ADMIN_PASSWORD: admin-pass-123
+      STORAGE_DIR: /tmp/sneakerlab-uploads
+  db:
+    ports: !override []
+    volumes: !override []
+    tmpfs:
+      - /var/lib/mysql

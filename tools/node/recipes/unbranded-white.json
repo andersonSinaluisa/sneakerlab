@@ -1,0 +1,71 @@
+{
+  "name": "Court Low",
+  "credits": "Basado en \"Unbranded White Sneaker\" (Sketchfab). Verificar licencia y atribución antes de uso comercial.",
+  "lengthMeters": 0.3,
+  "toe": "-x",
+  "inputIsLeftShoe": true,
+  "soleZoneForSideDetection": "midsole",
+  "liningColor": "#3a3f45",
+  "zones": {
+    "toe": {
+      "label": "Punta", "meshSuffix": "ToeCap", "from": ["Cube.005_WhiteLeather_0"],
+      "region": { "xFrom": 0.68 },
+      "images": true, "material": "leather", "materialOptions": ["leather", "suede", "canvas"],
+      "defaultColor": "#f4f3f0", "stitchInset": 0
+    },
+    "outer": {
+      "label": "Lateral exterior", "meshSuffix": "OuterPanel", "from": ["Cube.004_WhiteSuede_0"],
+      "region": { "zSide": "outer" },
+      "images": true, "material": "suede", "materialOptions": ["suede", "leather", "canvas", "mesh"],
+      "defaultColor": "#f4f3f0"
+    },
+    "inner": {
+      "label": "Lateral interior", "meshSuffix": "InnerPanel", "from": ["Cube.004_WhiteSuede_0"],
+      "region": { "zSide": "inner" },
+      "images": true, "material": "suede", "materialOptions": ["suede", "leather", "canvas", "mesh"],
+      "defaultColor": "#f4f3f0"
+    },
+    "heel": {
+      "label": "Talón", "meshSuffix": "HeelCounter", "from": ["Cube.005_WhiteLeather_0"],
+      "region": { "xTo": 0.2 },
+      "images": true, "material": "leather", "materialOptions": ["leather", "suede", "canvas"],
+      "defaultColor": "#f4f3f0"
+    },
+    "upper": {
+      "label": "Empeine y cuello", "meshSuffix": "Upper", "from": ["Cube.005_WhiteLeather_0"],
+      "region": { "xFrom": 0.2, "xTo": 0.68 },
+      "images": false, "colors": true, "material": "leather", "materialOptions": ["leather", "suede", "canvas"],
+      "defaultColor": "#f4f3f0"
+    },
+    "tongue": {
+      "label": "Lengüeta", "meshSuffix": "Tongue", "from": ["Cube.004_WhiteLeather_0"],
+      "images": true, "material": "leather", "materialOptions": ["leather", "canvas", "mesh"],
+      "defaultColor": "#f4f3f0"
+    },
+    "laces": {
+      "label": "Cordones", "meshSuffix": "Laces", "from": ["Plane_WhiteSatin_0"],
+      "images": false, "material": "lace", "defaultColor": "#fafafa"
+    },
+    "eyelets": {
+      "label": "Ojales", "meshSuffix": "Eyelets", "from": ["Cube.002_metal_0"],
+      "images": false, "material": "metal", "defaultColor": "#b8b8b8"
+    },
+    "midsole": {
+      "label": "Entresuela", "meshSuffix": "Midsole", "from": ["Cube.005_WhiteSole_0"],
+      "images": false, "material": "foam", "materialOptions": ["foam", "rubber"], "defaultColor": "#f5f3ee"
+    },
+    "outsole": {
+      "label": "Suela", "meshSuffix": "Outsole", "from": ["Cube.005_Normal_0"],
+      "images": false, "material": "rubber", "defaultColor": "#d9d4c7"
+    },
+    "lining": {
+      "label": "Forro interior", "meshSuffix": "Lining", "from": ["Cube.005_WhiteLeather_0_1"],
+      "images": false, "material": "canvas", "defaultColor": "#3a3f45"
+    },
+    "insole": {
+      "label": "Plantilla", "meshSuffix": "Insole", "from": ["Cube.006_WhiteSuede_0", "Cube.005_Insole_0"],
+      "customizable": false, "images": false, "colors": false, "material": "canvas", "defaultColor": "#c9c5bd"
+    }
+  },
+  "simplify": { "eyelets": 0.25, "lining": 0.5, "insole": 0.5, "upper": 0.6, "toe": 0.7, "heel": 0.7 }
+}

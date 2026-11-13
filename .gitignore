@@ -13,7 +13,7 @@
 # testing
 /coverage
 
-# next.js
+# next.js (ya no se usa; se conserva por si quedan restos locales)
 /.next/
 /out/
 
@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# despliegue
+.ssh-deploy.json
+
+# datos locales del API (PGlite, subidas)
+data/
+
+# build del frontend y paquete de despliegue
+/dist
+/deploy
+
+# API PHP
+/api/vendor/
+/api/.env
+/api/storage/uploads/*
+!/api/storage/uploads/.gitkeep

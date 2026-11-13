@@ -1,0 +1,292 @@
+{
+  "modelId": "court-low-01",
+  "name": "Court Low",
+  "version": 1,
+  "provisional": false,
+  "source": {
+    "type": "glb",
+    "url": "/models/court-low-01.glb",
+    "compression": [
+      "meshopt"
+    ]
+  },
+  "unitScale": 1,
+  "shoes": {
+    "right": {
+      "nodeName": "Right",
+      "label": "Derecho"
+    },
+    "left": {
+      "nodeName": "Left",
+      "label": "Izquierdo"
+    }
+  },
+  "layout": {
+    "bothShoesGap": 0.3,
+    "focusHeight": 0.42
+  },
+  "liningColor": "#3a3f45",
+  "credits": "Basado en \"Unbranded White Sneaker\" (Sketchfab). Verificar licencia y atribución antes de uso comercial.",
+  "zones": [
+    {
+      "id": "toe",
+      "label": "Punta",
+      "meshNames": {
+        "right": "R_ToeCap",
+        "left": "L_ToeCap"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "defaultColor": "#f4f3f0",
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas"
+      ],
+      "texture": {
+        "width": 2048,
+        "height": 872,
+        "printMm": {
+          "width": 181,
+          "height": 63.7
+        }
+      },
+      "stitchInset": 0
+    },
+    {
+      "id": "outer",
+      "label": "Lateral exterior",
+      "meshNames": {
+        "right": "R_OuterPanel",
+        "left": "L_OuterPanel"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "defaultColor": "#f4f3f0",
+      "material": "suede",
+      "materialOptions": [
+        "suede",
+        "leather",
+        "canvas",
+        "mesh"
+      ],
+      "texture": {
+        "width": 2048,
+        "height": 656,
+        "printMm": {
+          "width": 225.9,
+          "height": 73.6
+        }
+      }
+    },
+    {
+      "id": "inner",
+      "label": "Lateral interior",
+      "meshNames": {
+        "right": "R_InnerPanel",
+        "left": "L_InnerPanel"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "defaultColor": "#f4f3f0",
+      "material": "suede",
+      "materialOptions": [
+        "suede",
+        "leather",
+        "canvas",
+        "mesh"
+      ],
+      "texture": {
+        "width": 2048,
+        "height": 664,
+        "printMm": {
+          "width": 226.4,
+          "height": 73.6
+        }
+      }
+    },
+    {
+      "id": "heel",
+      "label": "Talón",
+      "meshNames": {
+        "right": "R_HeelCounter",
+        "left": "L_HeelCounter"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "defaultColor": "#f4f3f0",
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas"
+      ],
+      "texture": {
+        "width": 2048,
+        "height": 1008,
+        "printMm": {
+          "width": 171.9,
+          "height": 84.4
+        }
+      }
+    },
+    {
+      "id": "upper",
+      "label": "Empeine y cuello",
+      "meshNames": {
+        "right": "R_Upper",
+        "left": "L_Upper"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": true,
+      "defaultColor": "#f4f3f0",
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas"
+      ]
+    },
+    {
+      "id": "tongue",
+      "label": "Lengüeta",
+      "meshNames": {
+        "right": "R_Tongue",
+        "left": "L_Tongue"
+      },
+      "customizable": true,
+      "allowImages": true,
+      "allowText": true,
+      "allowColors": true,
+      "allowMaterials": true,
+      "defaultColor": "#f4f3f0",
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "canvas",
+        "mesh"
+      ],
+      "texture": {
+        "width": 2048,
+        "height": 2048,
+        "printMm": {
+          "width": 80.3,
+          "height": 148.2
+        }
+      }
+    },
+    {
+      "id": "laces",
+      "label": "Cordones",
+      "meshNames": {
+        "right": "R_Laces",
+        "left": "L_Laces"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": false,
+      "defaultColor": "#fafafa",
+      "material": "lace"
+    },
+    {
+      "id": "eyelets",
+      "label": "Ojales",
+      "meshNames": {
+        "right": "R_Eyelets",
+        "left": "L_Eyelets"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": false,
+      "defaultColor": "#b8b8b8",
+      "material": "metal"
+    },
+    {
+      "id": "midsole",
+      "label": "Entresuela",
+      "meshNames": {
+        "right": "R_Midsole",
+        "left": "L_Midsole"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": true,
+      "defaultColor": "#f5f3ee",
+      "material": "foam",
+      "materialOptions": [
+        "foam",
+        "rubber"
+      ]
+    },
+    {
+      "id": "outsole",
+      "label": "Suela",
+      "meshNames": {
+        "right": "R_Outsole",
+        "left": "L_Outsole"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": false,
+      "defaultColor": "#d9d4c7",
+      "material": "rubber"
+    },
+    {
+      "id": "lining",
+      "label": "Forro interior",
+      "meshNames": {
+        "right": "R_Lining",
+        "left": "L_Lining"
+      },
+      "customizable": true,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": true,
+      "allowMaterials": false,
+      "defaultColor": "#3a3f45",
+      "material": "canvas"
+    },
+    {
+      "id": "insole",
+      "label": "Plantilla",
+      "meshNames": {
+        "right": "R_Insole",
+        "left": "L_Insole"
+      },
+      "customizable": false,
+      "allowImages": false,
+      "allowText": false,
+      "allowColors": false,
+      "allowMaterials": false,
+      "defaultColor": "#c9c5bd",
+      "material": "canvas"
+    }
+  ],
+  "print": {
+    "referenceSizeEU": 42.5
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "$comment": "Relaciona nombres de objetos/materiales del asset original con las zonas de SneakerLab. Si el asset solo trae el zapato derecho, usa \"mirror\": true.",
+  "mirror": false,
+  "shoes": { "right": "Shoe_R", "left": "Shoe_L" },
+  "zones": {
+    "outer":   { "match": ["lateral_out", "outer", "quarter_out", "side_out"] },
+    "inner":   { "match": ["lateral_in", "inner", "quarter_in", "side_in"] },
+    "toe":     { "match": ["toe", "vamp", "puntera"] },
+    "heel":    { "match": ["heel", "counter", "talon"] },
+    "tongue":  { "match": ["tongue", "lengueta"] },
+    "laces":   { "match": ["lace", "cordon"], "material": "lace" },
+    "eyelets": { "match": ["eyelet", "ojal", "grommet"], "material": "metal" },
+    "midsole": { "match": ["midsole", "entresuela", "foam"], "material": "foam" },
+    "outsole": { "match": ["outsole", "sole", "suela", "tread"], "material": "rubber" },
+    "collar":  { "match": ["collar", "cuello", "padding"] },
+    "insole":  { "match": ["insole", "plantilla", "footbed"] }
+  }
+}

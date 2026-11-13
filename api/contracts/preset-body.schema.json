@@ -1,0 +1,298 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 60
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "manga-bw",
+        "anime-full-color",
+        "dark-anime",
+        "shonen-battle",
+        "samurai-anime",
+        "cyberpunk-anime",
+        "manga-panels",
+        "anime-eyes",
+        "anime-minimalist",
+        "chibi-kawaii",
+        "mecha-anime",
+        "anime-fantasy",
+        "anime-streetwear",
+        "anime-retro-90s",
+        "anime-graffiti",
+        "japanese-dragons",
+        "oni-masks",
+        "sakura",
+        "japanese-waves",
+        "kanji-typography",
+        "graffiti",
+        "street-art",
+        "comic-book",
+        "gothic",
+        "minimal-line-art",
+        "neon",
+        "abstract",
+        "gaming",
+        "geometric",
+        "custom-typography"
+      ]
+    },
+    "tags": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 240
+    },
+    "thumbnailUrl": {
+      "type": "string"
+    },
+    "previewImages": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "compatibleModels": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "colorPalette": {
+      "minItems": 1,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^#[0-9a-fA-F]{6}$"
+      }
+    },
+    "zones": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "zoneId": {
+            "type": "string"
+          },
+          "shoe": {
+            "type": "string",
+            "enum": [
+              "right",
+              "left"
+            ]
+          },
+          "color": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+          },
+          "material": {
+            "type": "string",
+            "enum": [
+              "leather",
+              "suede",
+              "canvas",
+              "mesh",
+              "rubber",
+              "foam",
+              "lace",
+              "metal"
+            ]
+          }
+        },
+        "required": [
+          "zoneId"
+        ]
+      }
+    },
+    "layers": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "kind": {
+            "default": "image",
+            "type": "string",
+            "const": "image"
+          },
+          "name": {
+            "type": "string"
+          },
+          "assetId": {
+            "type": "string"
+          },
+          "shoe": {
+            "default": "both",
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "right",
+                  "left"
+                ]
+              },
+              {
+                "type": "string",
+                "const": "both"
+              }
+            ]
+          },
+          "zoneId": {
+            "type": "string"
+          },
+          "x": {
+            "default": 0.5,
+            "type": "number",
+            "minimum": -0.5,
+            "maximum": 1.5
+          },
+          "y": {
+            "default": 0.5,
+            "type": "number",
+            "minimum": -0.5,
+            "maximum": 1.5
+          },
+          "width": {
+            "default": 0.4,
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "maximum": 3
+          },
+          "rotation": {
+            "default": 0,
+            "type": "number"
+          },
+          "opacity": {
+            "default": 1,
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "flipX": {
+            "default": false,
+            "type": "boolean"
+          },
+          "mirrorOnLeft": {
+            "default": false,
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "assetId",
+          "zoneId"
+        ]
+      }
+    },
+    "assets": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "svg",
+              "png",
+              "webp"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rasterSize": {
+            "default": 1024,
+            "type": "integer",
+            "minimum": 256,
+            "maximum": 2048
+          },
+          "license": {
+            "default": "original",
+            "type": "string",
+            "enum": [
+              "original",
+              "uploaded",
+              "ai-generated"
+            ]
+          },
+          "author": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "type",
+          "url"
+        ]
+      }
+    },
+    "status": {
+      "default": "draft",
+      "type": "string",
+      "enum": [
+        "published",
+        "draft",
+        "pending-assets"
+      ]
+    },
+    "pendingAssets": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "badge": {
+      "type": "string",
+      "enum": [
+        "new",
+        "popular"
+      ]
+    },
+    "version": {
+      "default": 1,
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "compatibleModels",
+    "colorPalette"
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "name": "Court Classic",
+  "credits": "Basado en un modelo de Sketchfab aportado por el usuario (assets/src/air_force1.glb), sin logotipos de terceros. Verificar licencia del autor y derechos de diseño antes de uso comercial.",
+  "lengthMeters": 0.3,
+  "toe": "-x",
+  "inputIsLeftShoe": true,
+  "soleZoneForSideDetection": "midsole",
+  "liningColor": "#e4e2dc",
+  "exclude": [
+    "Plane.004_Fabric Pattern 06_0",
+    "Plane.019_Fabric Pattern 06_0",
+    "Plane.013_Material.004_0",
+    "Plane.014_Material.004_0"
+  ],
+  "dropComponents": {
+    "Plane.001_Fine leather black_0": [
+      6,
+      7
+    ]
+  },
+  "zones": {
+    "toe": {
+      "label": "Puntera",
+      "meshSuffix": "ToeCap",
+      "from": [
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            2
+          ]
+        }
+      ],
+      "images": true,
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas"
+      ],
+      "defaultColor": "#f4f3f0"
+    },
+    "outer": {
+      "label": "Lateral exterior",
+      "meshSuffix": "OuterPanel",
+      "from": [
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            5
+          ]
+        }
+      ],
+      "images": true,
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas",
+        "mesh"
+      ],
+      "defaultColor": "#f4f3f0"
+    },
+    "inner": {
+      "label": "Lateral interior",
+      "meshSuffix": "InnerPanel",
+      "from": [
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            4
+          ]
+        }
+      ],
+      "images": true,
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas",
+        "mesh"
+      ],
+      "defaultColor": "#f4f3f0"
+    },
+    "quarter": {
+      "label": "Panel trasero",
+      "meshSuffix": "Quarter",
+      "from": [
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            3
+          ]
+        }
+      ],
+      "images": false,
+      "colors": true,
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas"
+      ],
+      "defaultColor": "#f4f3f0"
+    },
+    "heel": {
+      "label": "Talonera",
+      "meshSuffix": "HeelCounter",
+      "from": [
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            9,
+            10
+          ]
+        }
+      ],
+      "images": true,
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas"
+      ],
+      "defaultColor": "#f4f3f0"
+    },
+    "upper": {
+      "label": "Empeine y ojalera",
+      "meshSuffix": "Upper",
+      "from": [
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            0
+          ],
+          "region": {
+            "xFrom": 0.63,
+            "cut": "exact"
+          }
+        },
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            1,
+            11,
+            13,
+            14
+          ]
+        }
+      ],
+      "images": false,
+      "colors": true,
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "suede",
+        "canvas"
+      ],
+      "defaultColor": "#f4f3f0"
+    },
+    "tongue": {
+      "label": "Lengüeta",
+      "meshSuffix": "Tongue",
+      "from": [
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            0
+          ],
+          "region": {
+            "xTo": 0.63,
+            "cut": "exact"
+          }
+        },
+        {
+          "mesh": "Plane.001_Fine leather black_0",
+          "components": [
+            8,
+            12
+          ]
+        }
+      ],
+      "images": true,
+      "material": "leather",
+      "materialOptions": [
+        "leather",
+        "canvas",
+        "mesh"
+      ],
+      "defaultColor": "#f4f3f0"
+    },
+    "laces": {
+      "label": "Cordones",
+      "meshSuffix": "Laces",
+      "from": [
+        "Plane.002_Hex fabric Cloth_0"
+      ],
+      "images": false,
+      "material": "lace",
+      "defaultColor": "#fafafa"
+    },
+    "eyelets": {
+      "label": "Ojales",
+      "meshSuffix": "Eyelets",
+      "from": [
+        "Plane.002_Degradable Metal_0",
+        "Plane.002_Metal_0"
+      ],
+      "images": false,
+      "material": "metal",
+      "defaultColor": "#c9c9c9"
+    },
+    "stitching": {
+      "label": "Costuras",
+      "meshSuffix": "Stitching",
+      "from": [
+        "Plane.003__0",
+        "Plane.005_Material.004_0",
+        "Plane.006_Material.004_0",
+        "Plane.007_Material.004_0",
+        "Plane.008_Material.004_0",
+        "Plane.009_Material.004_0",
+        "Plane.010_Material.004_0",
+        "Plane.011_Material.004_0",
+        "Plane.012_Material.004_0"
+      ],
+      "images": false,
+      "material": "lace",
+      "defaultColor": "#e6e3dc"
+    },
+    "midsole": {
+      "label": "Entresuela",
+      "meshSuffix": "Midsole",
+      "from": [
+        "Plane_Material.001_0"
+      ],
+      "images": false,
+      "material": "rubber",
+      "materialOptions": [
+        "rubber",
+        "foam"
+      ],
+      "defaultColor": "#f5f3ee"
+    },
+    "outsole": {
+      "label": "Suela",
+      "meshSuffix": "Outsole",
+      "from": [
+        "Plane_Material.006_0",
+        "Plane_Material.010_0",
+        "Plane_Material.002_0"
+      ],
+      "images": false,
+      "material": "rubber",
+      "defaultColor": "#ebe8e1"
+    },
+    "lining": {
+      "label": "Forro interior",
+      "meshSuffix": "Lining",
+      "from": [
+        "Plane.001_Fabric_0"
+      ],
+      "images": false,
+      "material": "canvas",
+      "defaultColor": "#e4e2dc"
+    }
+  },
+  "simplify": {
+    "upper": 0.6,
+    "lining": 0.5,
+    "eyelets": 0.4,
+    "stitching": 0.6
+  }
+}

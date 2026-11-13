@@ -1,0 +1,107 @@
+{
+  "errors": [],
+  "warnings": [],
+  "info": [
+    "Malla excluida: Plane.004_Fabric Pattern 06_0",
+    "Malla excluida: Plane.013_Material.004_0",
+    "Malla excluida: Plane.014_Material.004_0",
+    "Malla excluida: Plane.019_Fabric Pattern 06_0",
+    "Mallas de origen: Plane_Material.001_0, Plane_Material.006_0, Plane_Material.010_0, Plane_Material.002_0, Plane.001_Fine leather black_0, Plane.001_Fabric_0, Plane.002_Hex fabric Cloth_0, Plane.002_Degradable Metal_0, Plane.002_Metal_0, Plane.003__0, Plane.005_Material.004_0, Plane.006_Material.004_0, Plane.007_Material.004_0, Plane.008_Material.004_0, Plane.009_Material.004_0, Plane.010_Material.004_0, Plane.011_Material.004_0, Plane.012_Material.004_0",
+    "Normalizado: largo 0.300 m, alto 0.136 m, ancho 0.105 m",
+    "Plane.001_Fine leather black_0: componentes descartados 6, 7 (960, 960 triángulos)",
+    "Planta a media longitud: +Z 0.052 / −Z 0.044 → +Z es exterior (derecho)",
+    "toe: UV cylindrical (176°), proporción 5.62",
+    "outer: UV planar, proporción 1.36",
+    "inner: UV planar, proporción 1.33",
+    "heel: UV cylindrical (176°), proporción 1.16",
+    "tongue: UV planar, proporción 1.05",
+    "Triángulos totales (ambos zapatos): 35329",
+    "GLB escrito: public/models/court-classic-01.glb (390 KB)",
+    "Manifiesto escrito: src/config/models/court-classic-01.json"
+  ],
+  "zones": {
+    "toe": {
+      "tris": 2200,
+      "uv": {
+        "aspect": 5.623322902506385,
+        "mode": "cylindrical",
+        "arcDeg": 176
+      },
+      "left": {
+        "aspect": 5.623322902506385,
+        "mode": "cylindrical",
+        "arcDeg": 176
+      }
+    },
+    "outer": {
+      "tris": 968,
+      "uv": {
+        "aspect": 1.3554926111264867,
+        "mode": "planar"
+      },
+      "left": {
+        "aspect": 1.3554926111264867,
+        "mode": "planar"
+      }
+    },
+    "inner": {
+      "tris": 1072,
+      "uv": {
+        "aspect": 1.3270778141699642,
+        "mode": "planar"
+      },
+      "left": {
+        "aspect": 1.3270778141699642,
+        "mode": "planar"
+      }
+    },
+    "quarter": {
+      "tris": 2152
+    },
+    "heel": {
+      "tris": 1416,
+      "uv": {
+        "aspect": 1.1562665057034005,
+        "mode": "cylindrical",
+        "arcDeg": 176
+      },
+      "left": {
+        "aspect": 1.1562665057034005,
+        "mode": "cylindrical",
+        "arcDeg": 176
+      }
+    },
+    "upper": {
+      "tris": 10500
+    },
+    "tongue": {
+      "tris": 3016,
+      "uv": {
+        "aspect": 1.045588470815383,
+        "mode": "planar"
+      },
+      "left": {
+        "aspect": 1.045588470815383,
+        "mode": "planar"
+      }
+    },
+    "laces": {
+      "tris": 5264
+    },
+    "eyelets": {
+      "tris": 2816
+    },
+    "stitching": {
+      "tris": 13380
+    },
+    "midsole": {
+      "tris": 11896
+    },
+    "outsole": {
+      "tris": 3628
+    },
+    "lining": {
+      "tris": 3128
+    }
+  }
+}
