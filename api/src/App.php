@@ -27,6 +27,7 @@ final class App
         Routes\Quotes::register($app, $ctx);
         Routes\Orders::register($app, $ctx);
         Routes\Presets::register($app, $ctx);
+        Routes\Categories::register($app, $ctx);
         Routes\Admin::register($app, $ctx);
 
         $app->addRoutingMiddleware();

@@ -49,8 +49,12 @@ export function TopBar() {
     });
   };
 
+  const editingId = useDesignStudio((d) => d.editingId);
+  const editingPreset = useDesignStudio((d) => (editingId ? d.remote.find((p) => p.id === editingId) : undefined));
+
   const newDesign = async () => {
     if (!window.confirm("¿Empezar un diseño nuevo? El borrador actual se reemplazará.")) return;
+    useDesignStudio.getState().setEditing(null);
     s().newDocument();
     await localProjectRepository.clearDraft();
     toast.success("Nuevo diseño");
@@ -137,7 +141,7 @@ export function TopBar() {
         <div className="mx-1 hidden h-6 w-px bg-neutral-200 sm:block" />
         <AccountMenu />
       </div>
-      {templateOpen && <SaveAsTemplateDialog onClose={() => setTemplateOpen(false)} />}
+      {templateOpen && <SaveAsTemplateDialog onClose={() => setTemplateOpen(false)} existing={editingPreset} />}
       {exportOpen && <ExportDialog onClose={() => setExportOpen(false)} />}
     </header>
   );

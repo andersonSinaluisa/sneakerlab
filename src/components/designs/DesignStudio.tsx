@@ -7,7 +7,8 @@ import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Heart, Search, SlidersHorizontal, Sparkles, X } from "lucide-react";
 import { useDesignStudio, type SortMode } from "@/lib/designs/store";
-import { CATEGORY_GROUPS, DESIGN_CATEGORIES, type DesignCategoryId, type SneakerDesignPreset } from "@/lib/designs/schema";
+import type { SneakerDesignPreset } from "@/lib/designs/schema";
+import { useCategories, useCategory } from "@/lib/designs/categories";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/field";
 import { Tip } from "@/components/ui/tooltip";
@@ -59,6 +60,8 @@ const SORTS: { id: SortMode; label: string }[] = [
 
 export function DesignStudio() {
   const s = useDesignStudio();
+  const categories = useCategories((c) => c.list);
+  const groups = useCategories((c) => c.groups);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
   useEffect(() => {
@@ -78,7 +81,7 @@ export function DesignStudio() {
 
   const list = useMemo(() => {
     const q = s.query.trim().toLowerCase();
-    const cats = new Map(DESIGN_CATEGORIES.map((c) => [c.id, c]));
+    const cats = new Map(categories.map((c) => [c.id, c]));
     let items = s.published().filter((p) => {
       if (s.group !== "all" && cats.get(p.category)?.group !== s.group) return false;
       if (s.category !== "all" && p.category !== s.category) return false;
@@ -101,9 +104,12 @@ export function DesignStudio() {
       }
     });
     return items;
-  }, [s]);
+  }, [s, categories]);
 
-  const categoriesInGroup = DESIGN_CATEGORIES.filter((c) => s.group === "all" || c.group === s.group);
+  const visible = categories.filter((c) => c.active);
+  const categoriesInGroup = visible.filter((c) => s.group === "all" || c.group === s.group);
+  // Solo los grupos con algún estilo visible
+  const groupEntries = Object.entries(groups).filter(([g]) => visible.some((c) => c.group === g));
 
   return (
     <AnimatePresence>
@@ -163,7 +169,7 @@ export function DesignStudio() {
                 <aside className={cn("w-60 shrink-0 overflow-y-auto border-r border-neutral-200/80 bg-white/70 p-4", filtersOpen ? "block" : "hidden lg:block")}>
                   <div className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Estilo</div>
                   <div className="flex flex-col gap-1">
-                    {([["all", "Todos"], ...Object.entries(CATEGORY_GROUPS)] as [typeof s.group, string][]).map(([id, label]) => (
+                    {[["all", "Todos"], ...groupEntries].map(([id, label]) => (
                       <button key={id} type="button" onClick={() => s.setGroup(id)} className={cn("rounded-lg px-2.5 py-1.5 text-left text-[13px]", s.group === id ? "bg-neutral-900 text-white" : "text-neutral-700 hover:bg-neutral-100")}>
                         {label}
                       </button>
@@ -173,7 +179,7 @@ export function DesignStudio() {
                   <div className="flex flex-wrap gap-1">
                     <CategoryChip active={s.category === "all"} onClick={() => s.setCategory("all")} label="Todas" />
                     {categoriesInGroup.map((c) => (
-                      <CategoryChip key={c.id} active={s.category === c.id} onClick={() => s.setCategory(c.id as DesignCategoryId)} label={c.label} />
+                      <CategoryChip key={c.id} active={s.category === c.id} onClick={() => s.setCategory(c.id)} label={c.label} />
                     ))}
                   </div>
                   <div className="mb-2 mt-5 text-[11px] font-semibold uppercase tracking-wider text-neutral-400">Color</div>
@@ -229,7 +235,7 @@ function CategoryChip({ active, onClick, label }: { active: boolean; onClick: ()
 export function DesignCard({ preset }: { preset: SneakerDesignPreset }) {
   const s = useDesignStudio();
   const fav = s.favorites.includes(preset.id);
-  const cat = DESIGN_CATEGORIES.find((c) => c.id === preset.category);
+  const cat = useCategory(preset.category);
   return (
     <motion.article layout initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} className="group relative overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition-shadow hover:shadow-md">
       <button type="button" className="block w-full text-left" onClick={() => s.openDetail(preset.id)} onMouseEnter={() => void s.preload(preset.id)}>

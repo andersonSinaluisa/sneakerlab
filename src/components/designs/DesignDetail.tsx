@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArrowLeft, Heart, Layers3, Wand2 } from "lucide-react";
 import { useDesignStudio } from "@/lib/designs/store";
-import { DESIGN_CATEGORIES } from "@/lib/designs/schema";
+import { useCategory } from "@/lib/designs/categories";
 import { getMaterialPreset } from "@/lib/materials/presets";
 import { useModel } from "@/lib/editor/store";
 import { checkCompatibility } from "@/lib/designs/apply";
@@ -23,8 +23,8 @@ export function DesignDetail({ presetId }: { presetId: string }) {
     if (preset) void s.preload(preset.id);
   }, [preset, s]);
 
+  const cat = useCategory(preset?.category);
   if (!preset) return null;
-  const cat = DESIGN_CATEGORIES.find((c) => c.id === preset.category);
   const fav = s.favorites.includes(preset.id);
   const compat = checkCompatibility(preset, model);
   const views = preset.previewImages.length ? preset.previewImages : preset.thumbnailUrl ? [preset.thumbnailUrl] : [];

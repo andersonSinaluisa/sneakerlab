@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Heart, LayoutGrid } from "lucide-react";
 import { useDesignStudio } from "@/lib/designs/store";
-import { DESIGN_CATEGORIES } from "@/lib/designs/schema";
+import { categoryById } from "@/lib/designs/categories";
 import { PanelSection } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
 import { Thumb } from "@/components/designs/DesignStudio";
@@ -42,7 +42,7 @@ function QuickGrid({ ids }: { ids: string[] }) {
     <div className="grid grid-cols-2 gap-2">
       {ids.map((id) => {
         const p = s.byId(id)!;
-        const cat = DESIGN_CATEGORIES.find((c) => c.id === p.category);
+        const cat = categoryById(p.category);
         return (
           <button key={id} type="button" onClick={() => { s.setOpen(true); s.openDetail(id); }} className="group overflow-hidden rounded-xl border border-neutral-200 bg-white text-left hover:border-neutral-400">
             <div className="relative aspect-[4/3] bg-[#e9e7e2]">

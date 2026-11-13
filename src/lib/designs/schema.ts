@@ -44,8 +44,10 @@ export const DESIGN_CATEGORIES = [
   { id: "custom-typography", label: "Custom Typography", group: "urban" },
 ] as const;
 
-export type DesignCategoryId = (typeof DESIGN_CATEGORIES)[number]["id"];
-export const CATEGORY_IDS = DESIGN_CATEGORIES.map((c) => c.id) as [DesignCategoryId, ...DesignCategoryId[]];
+/** Integrados (semilla). Los estilos son administrables: el id es cualquier slug existente en el servidor. */
+export type BuiltinCategoryId = (typeof DESIGN_CATEGORIES)[number]["id"];
+export type DesignCategoryId = string;
+export const CATEGORY_IDS = DESIGN_CATEGORIES.map((c) => c.id) as [BuiltinCategoryId, ...BuiltinCategoryId[]];
 export const CATEGORY_GROUPS = { anime: "Anime y manga", japan: "Cultura japonesa", urban: "Otros estilos" } as const;
 
 const hex = z.string().regex(/^#[0-9a-fA-F]{6}$/);
@@ -93,7 +95,8 @@ export const designLayerSchema = z.object({
 export const designPresetSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   name: z.string().min(1).max(60),
-  category: z.enum(CATEGORY_IDS),
+  /** Estilo (slug). El servidor comprueba que exista en design_categories. */
+  category: z.string().regex(/^[a-z0-9-]+$/).max(60),
   tags: z.array(z.string()).default([]),
   description: z.string().max(240).optional(),
   thumbnailUrl: z.string().optional(),

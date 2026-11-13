@@ -64,13 +64,18 @@ export function useAutosave() {
         // Llegada desde Administración (sessionStorage) o desde la landing (?diseno=id):
         // abre la plantilla indicada como copia editable.
         const fromLanding = new URLSearchParams(window.location.search).get("diseno");
-        const pending = sessionStorage.getItem("sneakerlab:openPreset") ?? fromLanding;
+        const fromAdmin = sessionStorage.getItem("sneakerlab:openPreset");
+        const pending = fromAdmin ?? fromLanding;
         if (fromLanding) window.history.replaceState(null, "", window.location.pathname);
         if (pending) {
           sessionStorage.removeItem("sneakerlab:openPreset");
           const { useDesignStudio } = await import("@/lib/designs/store");
           await useDesignStudio.getState().hydrate();
-          void useDesignStudio.getState().apply(pending, { mode: "customize" });
+          const studio = useDesignStudio.getState();
+          // Admin: plantilla del servidor → "Guardar como plantilla" la actualiza en vez de duplicarla.
+          if (fromAdmin && studio.remote.length === 0) await studio.loadAdmin().catch(() => undefined);
+          const ok = await useDesignStudio.getState().apply(pending, { mode: "customize" });
+          if (ok && fromAdmin && useDesignStudio.getState().remote.some((p) => p.id === pending)) useDesignStudio.getState().setEditing(pending);
         }
       }
     })();

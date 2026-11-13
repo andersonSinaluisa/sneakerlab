@@ -28,7 +28,7 @@ final class Catalog
 
         $app->get('/api/catalog/materials', fn (Request $req, Response $res) => Http::json($res, ['materials' => Contracts::catalog()['materials']]));
 
-        $app->get('/api/catalog/categories', fn (Request $req, Response $res) => Http::json($res, ['categories' => Contracts::catalog()['categories'], 'groups' => Contracts::catalog()['groups']]));
+        // /api/catalog/categories vive en Routes\Categories (estilos administrables en la BD).
 
         /** Extras elegibles al pedir (acabados y servicios) con su precio vigente. */
         $app->get('/api/catalog/extras', function (Request $req, Response $res) use ($ctx) {

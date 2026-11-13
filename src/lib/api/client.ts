@@ -46,6 +46,8 @@ export interface Shipping { fullName: string; phone?: string; address1: string; 
 export interface Order { id: string; number: number; status: OrderStatus; total: number; currency: string; size: string | null; notes: string | null; shipping: Shipping | null; priceSnapshot: QuoteBreakdown; designId: string | null; createdAt: string; updatedAt: string; history?: { from: OrderStatus | null; to: OrderStatus; note: string | null; at: string }[]; customer?: { email: string; name: string } }
 export interface PriceRule { id: string; kind: string; target: string | null; label: string; amount: number; factor: number; active: boolean }
 export interface QuoteExtras { services: string[]; finish?: string }
+export interface DesignCategory { id: string; label: string; group: string; sort: number; active: boolean; builtin: boolean }
+type CategoryList = { categories: DesignCategory[]; groups: Record<string, string> };
 
 /* ---------- Endpoints ---------- */
 export const authApi = {
@@ -88,6 +90,10 @@ export const ordersApi = {
   cancel: (id: string) => api<{ order: Order }>(`/orders/${id}/cancel`, { method: "POST" }),
 };
 
+export const catalogApi = {
+  categories: () => api<CategoryList>("/catalog/categories"),
+};
+
 export const presetsApi = {
   published: () => api<{ presets: SneakerDesignPreset[] }>("/presets"),
   favorites: () => api<{ favorites: string[] }>("/presets/favorites"),
@@ -105,6 +111,11 @@ export const adminApi = {
   setStatus: (id: string, status: OrderStatus, note?: string) => api<{ order: Order }>(`/admin/orders/${id}/status`, { method: "POST", json: { status, note } }),
   presets: () => api<{ presets: SneakerDesignPreset[] }>("/admin/presets"),
   savePreset: (p: SneakerDesignPreset) => api<{ preset: SneakerDesignPreset }>("/admin/presets", { method: "POST", json: p }),
+  updatePreset: (id: string, p: SneakerDesignPreset) => api<{ preset: SneakerDesignPreset }>(`/admin/presets/${id}`, { method: "PUT", json: p }),
   publishPreset: (id: string, published: boolean) => api<{ preset: SneakerDesignPreset }>(`/admin/presets/${id}/publish`, { method: "POST", json: { published } }),
   deletePreset: (id: string) => api<void>(`/admin/presets/${id}`, { method: "DELETE" }),
+  categories: () => api<CategoryList>("/admin/categories"),
+  createCategory: (c: { label: string; group: string; active?: boolean }) => api<{ category: DesignCategory }>("/admin/categories", { method: "POST", json: c }),
+  updateCategory: (id: string, c: Partial<Pick<DesignCategory, "label" | "group" | "sort" | "active">>) => api<{ category: DesignCategory }>(`/admin/categories/${id}`, { method: "PUT", json: c }),
+  deleteCategory: (id: string) => api<void>(`/admin/categories/${id}`, { method: "DELETE" }),
 };

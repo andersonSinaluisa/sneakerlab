@@ -56,6 +56,9 @@ foreach ($files as $file) {
     echo "Migración aplicada: $name\n";
 }
 
+$seeded = SneakerLab\Routes\Categories::seed($db);
+if ($seeded) echo "$seeded estilos integrados añadidos\n";
+
 if (!$db->one('SELECT id FROM price_rules LIMIT 1')) {
     foreach (Engine::DEFAULT_RULES as $r) {
         $db->insert('price_rules', ['id' => Http::uuid(), 'kind' => $r['kind'], 'target' => $r['target'], 'label' => $r['label'], 'amount' => Http::money((float) $r['amount']), 'factor' => number_format((float) $r['factor'], 3, '.', ''), 'active' => true]);

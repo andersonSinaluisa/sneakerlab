@@ -185,4 +185,34 @@ describe.skipIf(!BASE)("API SneakerLab (PHP)", () => {
     await json("DELETE", `/api/presets/favorites/${created.id}`, undefined, token);
     expect((await (await json("GET", "/api/presets/favorites", undefined, token)).json()).favorites).toEqual([]);
   });
+
+  it("estilos: crear, ocultar, validar en presets y proteger integrados y usados", async () => {
+    const pub0 = await (await req("/api/catalog/categories")).json();
+    expect(pub0.categories.map((c: { id: string }) => c.id)).toContain("graffiti");
+    expect(Object.keys(pub0.groups)).toContain("urban");
+
+    expect((await json("POST", "/api/admin/categories", { label: "Fútbol", group: "urban" }, token)).status).toBe(403);
+    const r = await json("POST", "/api/admin/categories", { label: "Fútbol Retro", group: "urban" }, adminToken);
+    expect(r.status).toBe(201);
+    const { category } = await r.json();
+    expect(category).toMatchObject({ id: "futbol-retro", label: "Fútbol Retro", group: "urban", active: true, builtin: false });
+    expect((await json("POST", "/api/admin/categories", { label: "Fútbol retro", group: "urban" }, adminToken)).status).toBe(409);
+    expect((await json("POST", "/api/admin/categories", { label: "X", group: "no-existe" }, adminToken)).status).toBe(422);
+
+    // Un preset con estilo inexistente se rechaza; con el nuevo, se acepta
+    const base = { name: "Con estilo", compatibleModels: [DEFAULT_MODEL_ID], colorPalette: ["#112233"], zones: [], layers: [], assets: [], tags: [] };
+    expect((await json("POST", "/api/admin/presets", { ...base, category: "no-existe" }, adminToken)).status).toBe(422);
+    const created = await (await json("POST", "/api/admin/presets", { ...base, category: "futbol-retro" }, adminToken)).json();
+
+    // Ocultar: desaparece del catálogo público, sigue en el de admin
+    expect((await (await json("PUT", "/api/admin/categories/futbol-retro", { active: false }, adminToken)).json()).category.active).toBe(false);
+    expect((await (await req("/api/catalog/categories")).json()).categories.map((c: { id: string }) => c.id)).not.toContain("futbol-retro");
+    expect((await (await json("GET", "/api/admin/categories", undefined, adminToken)).json()).categories.map((c: { id: string }) => c.id)).toContain("futbol-retro");
+
+    // Borrado: integrados nunca; propios solo si nadie los usa
+    expect((await json("DELETE", "/api/admin/categories/graffiti", undefined, adminToken)).status).toBe(409);
+    expect((await json("DELETE", "/api/admin/categories/futbol-retro", undefined, adminToken)).status).toBe(409);
+    await json("DELETE", `/api/admin/presets/${created.preset.id}`, undefined, adminToken);
+    expect((await json("DELETE", "/api/admin/categories/futbol-retro", undefined, adminToken)).status).toBe(204);
+  });
 });

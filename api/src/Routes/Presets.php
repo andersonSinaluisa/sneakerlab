@@ -31,11 +31,14 @@ final class Presets
     }
 
     /** Valida el cuerpo con el contrato del frontend y aplica los valores por defecto de zod. */
-    private static function body(Request $req): \stdClass
+    private static function body(Request $req, Ctx $ctx): \stdClass
     {
         $b = Http::body($req);
         $errors = Contracts::validate('preset-body', $b);
         if ($errors) throw new HttpError(422, 'Datos inválidos', $errors);
+        if (!Categories::exists($ctx->db(), (string) $b->category)) {
+            throw new HttpError(422, 'Datos inválidos', ["category: el estilo «{$b->category}» no existe"]);
+        }
         foreach (['tags' => [], 'previewImages' => [], 'zones' => [], 'layers' => [], 'assets' => [], 'status' => 'draft', 'pendingAssets' => [], 'version' => 1] as $k => $v) {
             if (!property_exists($b, $k)) $b->$k = $v;
         }
@@ -93,7 +96,7 @@ final class Presets
 
         $app->post('/api/admin/presets', function (Request $req, Response $res) use ($ctx) {
             $admin = Http::requireAdmin($req);
-            $b = self::body($req);
+            $b = self::body($req, $ctx);
             $id = $b->id ?? 'custom-' . substr(Http::uuid(), 0, 8);
             if (self::load($ctx, $id)) throw new HttpError(409, 'Ya existe un diseño con ese id');
             $status = count($b->pendingAssets) ? 'pending-assets' : $b->status;
@@ -106,7 +109,7 @@ final class Presets
 
         $app->put('/api/admin/presets/{id}', function (Request $req, Response $res, array $args) use ($ctx) {
             Http::requireAdmin($req);
-            $b = self::body($req);
+            $b = self::body($req, $ctx);
             $existing = self::load($ctx, $args['id']);
             if (!$existing) throw HttpError::notFound('Diseño');
             $status = count($b->pendingAssets) ? 'pending-assets' : $b->status;

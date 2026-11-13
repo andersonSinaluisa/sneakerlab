@@ -12,7 +12,7 @@ const model = getModel("court-low-01");
 
 describe("biblioteca de diseños", () => {
   it("tiene al menos 30 diseños con la distribución pedida", () => {
-    const groups = new Map(DESIGN_CATEGORIES.map((c) => [c.id, c.group]));
+    const groups = new Map<string, string>(DESIGN_CATEGORIES.map((c) => [c.id, c.group]));
     const count = (g: string) => BUILTIN_PRESETS.filter((p) => groups.get(p.category) === g).length;
     expect(BUILTIN_PRESETS.length).toBeGreaterThanOrEqual(30);
     expect(count("anime")).toBeGreaterThanOrEqual(20);

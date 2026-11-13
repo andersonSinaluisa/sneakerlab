@@ -14,6 +14,9 @@ import { ensureUrlAsset } from "@/lib/assets/assetStore";
 import { useEditor } from "@/lib/editor/store";
 import { getModel } from "@/lib/model/registry";
 import { assetRefFromDesignAsset } from "./apply";
+import { adminApi, assetsApi, presetsApi } from "@/lib/api/client";
+import { useAuth } from "@/lib/api/auth";
+import { isCategoryVisible, useCategories } from "./categories";
 
 const CUSTOM_KEY = "sneakerlab:designs:custom:v1";
 const FAV_KEY = "sneakerlab:designs:favorites:v1";
@@ -23,12 +26,16 @@ export type SortMode = "featured" | "newest" | "name" | "favorites";
 interface DesignStudioState {
   open: boolean;
   detailId: string | null;
+  /** Plantillas de administración guardadas en el servidor. */
+  remote: SneakerDesignPreset[];
+  /** Copias locales de versiones anteriores (IndexedDB), pendientes de subir. */
   custom: SneakerDesignPreset[];
   favorites: string[];
   hydrated: boolean;
   query: string;
   category: DesignCategoryId | "all";
-  group: "all" | "anime" | "japan" | "urban";
+  /** "all" o un id de grupo de estilos (anime, japan, urban…). */
+  group: string;
   color: string | null;
   sort: SortMode;
   onlyFavorites: boolean;
@@ -53,14 +60,25 @@ interface DesignStudioState {
   /** Precarga ilustraciones del preset (para previsualizar rápido). */
   preload: (id: string) => Promise<void>;
 
-  saveCustom: (preset: SneakerDesignPreset) => Promise<void>;
+  /** Crea o actualiza una plantilla en el servidor (admin). Devuelve la versión guardada. */
+  saveCustom: (preset: SneakerDesignPreset) => Promise<SneakerDesignPreset>;
+  publish: (id: string, published: boolean) => Promise<void>;
   deleteCustom: (id: string) => Promise<void>;
+  /** Admin: todas las plantillas del servidor (también borradores) y todos los estilos. */
+  loadAdmin: () => Promise<void>;
+  /** ¿Solo existe en IndexedDB de este navegador (versión anterior)? */
+  isLocal: (id: string) => boolean;
+  /** Plantilla del servidor que se está editando en el editor (para actualizarla, no duplicarla). */
+  editingId: string | null;
+  setEditing: (id: string | null) => void;
 }
 
 export const useDesignStudio = create<DesignStudioState>((set, get) => ({
   open: false,
   detailId: null,
+  remote: [],
   custom: [],
+  editingId: null,
   favorites: [],
   hydrated: false,
   query: "",
@@ -97,10 +115,24 @@ export const useDesignStudio = create<DesignStudioState>((set, get) => ({
     } catch {
       set({ hydrated: true });
     }
+    // Plantillas publicadas por administración y estilos visibles (sin API: solo integrados).
+    await Promise.all([
+      presetsApi.published().then(
+        ({ presets }) => { if (!get().remote.length) set({ remote: presets.flatMap((p) => { try { return [parseServer(p)]; } catch { return []; } }) }); },
+        () => undefined,
+      ),
+      useCategories.getState().load(),
+    ]);
   },
 
-  all: () => [...BUILTIN_PRESETS, ...get().custom],
-  published: () => get().all().filter((p) => p.status === "published"),
+  // Servidor primero; las copias locales antiguas solo si aún no se subieron.
+  all: () => {
+    const remoteIds = new Set(get().remote.map((p) => p.id));
+    return [...BUILTIN_PRESETS, ...get().remote, ...get().custom.filter((p) => !remoteIds.has(p.id))];
+  },
+  // Al catálogo de clientes solo llega lo publicado en el servidor (y los integrados), con su estilo visible.
+  published: () => [...BUILTIN_PRESETS, ...get().remote].filter((p) => p.status === "published" && isCategoryVisible(p.category)),
+  isLocal: (id) => get().custom.some((p) => p.id === id) && !get().remote.some((p) => p.id === id),
   byId: (id) => get().all().find((p) => p.id === id),
 
   preload: async (id) => {
@@ -131,7 +163,8 @@ export const useDesignStudio = create<DesignStudioState>((set, get) => ({
       toast.error(compat.errors[0] ?? "El diseño no es compatible con este modelo.");
       return false;
     }
-    set({ applying: id });
+    // Aplicar un diseño deja de "editar" la plantilla anterior (quien abre desde Administración lo vuelve a fijar).
+    set({ applying: id, editingId: null });
     try {
       // 2. Recursos gráficos
       const results = await Promise.allSettled(preset.assets.map((a) => ensureUrlAsset(assetRefFromDesignAsset(a))));
@@ -159,15 +192,68 @@ export const useDesignStudio = create<DesignStudioState>((set, get) => ({
   },
 
   saveCustom: async (preset) => {
-    const custom = [...get().custom.filter((p) => p.id !== preset.id), preset];
-    set({ custom });
-    await idbSet(CUSTOM_KEY, custom);
+    requireAdmin();
+    const body = await withUploadedImages(preset);
+    const exists = get().remote.some((p) => p.id === preset.id);
+    const { preset: saved } = exists ? await adminApi.updatePreset(preset.id, body) : await adminApi.savePreset(body);
+    set({ remote: [...get().remote.filter((p) => p.id !== saved.id), parseServer(saved)] });
+    // Si venía de la copia local antigua (IndexedDB), ya vive en el servidor.
+    if (get().custom.some((p) => p.id === preset.id)) await dropLocal(preset.id);
+    return parseServer(saved);
+  },
+  publish: async (id, published) => {
+    requireAdmin();
+    const { preset } = await adminApi.publishPreset(id, published);
+    set({ remote: get().remote.map((p) => (p.id === id ? parseServer(preset) : p)) });
   },
   deleteCustom: async (id) => {
-    const custom = get().custom.filter((p) => p.id !== id);
-    set({ custom });
-    await idbSet(CUSTOM_KEY, custom);
+    if (get().remote.some((p) => p.id === id)) {
+      requireAdmin();
+      await adminApi.deletePreset(id);
+      set({ remote: get().remote.filter((p) => p.id !== id) });
+    }
+    if (get().custom.some((p) => p.id === id)) await dropLocal(id);
   },
+  loadAdmin: async () => {
+    const [{ presets }] = await Promise.all([adminApi.presets(), useCategories.getState().load(true)]);
+    set({ remote: presets.map(parseServer) });
+  },
+  setEditing: (editingId) => set({ editingId }),
 }));
+
+/* ---------- Servidor ---------- */
+
+function requireAdmin() {
+  if (useAuth.getState().user?.role !== "admin") throw new Error("Inicia sesión como administrador para gestionar plantillas.");
+}
+
+function parseServer(p: unknown): SneakerDesignPreset {
+  return designPresetSchema.parse({ ...(p as object), source: "custom" });
+}
+
+async function dropLocal(id: string) {
+  const custom = useDesignStudio.getState().custom.filter((p) => p.id !== id);
+  useDesignStudio.setState({ custom });
+  await idbSet(CUSTOM_KEY, custom);
+}
+
+/** Las miniaturas capturadas llegan como data: URL; se suben al almacenamiento y se guarda su URL. */
+async function withUploadedImages(preset: SneakerDesignPreset): Promise<SneakerDesignPreset> {
+  const cache = new Map<string, string>();
+  const up = async (url: string | undefined) => {
+    if (!url?.startsWith("data:")) return url;
+    if (!cache.has(url)) {
+      const blob = await (await fetch(url)).blob();
+      const bitmap = await createImageBitmap(blob);
+      const remote = await assetsApi.upload(blob, { name: `${preset.id}-miniatura`, width: bitmap.width, height: bitmap.height });
+      bitmap.close();
+      cache.set(url, remote.url);
+    }
+    return cache.get(url);
+  };
+  const thumbnailUrl = await up(preset.thumbnailUrl);
+  const previewImages = (await Promise.all(preset.previewImages.map(up))).filter((u): u is string => !!u);
+  return { ...preset, thumbnailUrl, previewImages };
+}
 
 export { DESIGN_ASSETS };
